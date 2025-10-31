@@ -9,7 +9,9 @@ use App\Http\Controllers\MenuController;
 
 
 Route::get('/clients', [ClientController::class, 'index'])->name('index.index');
-Route::resource('admin/menus', MenuController::class);
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('menus', MenuController::class);
+});
 
 
 
