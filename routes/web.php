@@ -12,7 +12,7 @@ use App\Http\Controllers\CategoryController;
 Route::get('/clients', [ClientController::class, 'index'])->name('index.index');
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('menus', MenuController::class);
-    Route::resource('category', CategoryController::class);
+    Route::resource('categories', CategoryController::class);
 });
 
 
